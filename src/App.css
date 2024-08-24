@@ -1,30 +1,35 @@
+/* Body styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-image: 
-  url('https://images.pexels.com/photos/2341830/pexels-photo-2341830.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');   background-position: center; */
-  background-image: 
-  url('https://images.pexels.com/photos/3776592/pexels-photo-3776592.jpeg');
+  /* Background image settings */
+  background-image: url('https://images.pexels.com/photos/3776592/pexels-photo-3776592.jpeg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: auto;
 }
-.weather-content{
+
+/* Main container for the weather content */
+.weather-content {
   padding: 0 3%;
   padding-top: 3%;
   height: auto;
 }
-.input-search{
+
+/* Input and search button container */
+.input-search {
   display: flex;
   gap: 10px;
   justify-content: center;
   align-items: center;
 }
-.input-search input{
+
+/* Input field styles */
+.input-search input {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -35,13 +40,19 @@ body {
   color: #FFFFFF;
   font-weight: bold;
 }
-input::placeholder{
+
+/* Placeholder styles */
+input::placeholder {
   color: #FFFFFF;
 }
+
+/* Remove outline when input is focused */
 input:focus-visible {
   outline: none !important;
 }
-.input-search button{
+
+/* Search button styles */
+.input-search button {
   width: 15%;
   padding: 10px;
   border-radius: 10px;
@@ -53,12 +64,15 @@ input:focus-visible {
   font-weight: bold;
   text-align: left;
 }
-.input-search button:hover{
+
+/* Hover effect for the search button */
+.input-search button:hover {
   background-color: #FFFFFF;
   color: grey;
 }
-/*toggle-button*/
-.toggle-button button{
+
+/* Toggle button container */
+.toggle-button button {
   margin-top: 15px;
   background-color: transparent;
   color: #FFFFFF;
@@ -70,19 +84,27 @@ input:focus-visible {
   font-weight: bold;
   text-align: left;
 }
-.toggle-button button:hover{
+
+/* Hover effect for toggle button */
+.toggle-button button:hover {
   background-color: #FFFFFF;
   color: grey;
 }
-.weather-details{
+
+/* Weather details container */
+.weather-details {
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
 }
-.weather-details h2{
+
+/* Weather details title */
+.weather-details h2 {
   font-size: 25px;
   font-weight: 800;
 }
+
+/* Main weather information container */
 .main-details {
   display: grid;
   grid-template-columns: auto;
@@ -92,9 +114,11 @@ input:focus-visible {
   font-weight: bold;
   width: 85%;
   background-color: transparent;
-  position: relative; 
+  position: relative;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
+
+/* Background image overlay for main weather details */
 .main-details::before {
   content: '';
   position: absolute;
@@ -102,22 +126,26 @@ input:focus-visible {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-  url('https://images.pexels.com/photos/3776592/pexels-photo-3776592.jpeg'); 
+  background-image: url('https://images.pexels.com/photos/3776592/pexels-photo-3776592.jpeg');
   background-position: center;
   background-size: cover;
-  background-position: center;
-  opacity: 0.9; 
-  border-radius: 20px; 
+  opacity: 0.9;
+  border-radius: 20px;
   z-index: -1;
 }
-.forcast-details{
+
+/* Forecast details container */
+.forcast-details {
   color: #FFFFFF;
 }
-.forcast-details h2{
+
+/* Forecast details title */
+.forcast-details h2 {
   font-size: 25px;
-  font-weight: 800; 
+  font-weight: 800;
 }
+
+/* Main forecast information container */
 .forcast-main-details {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -128,9 +156,11 @@ input:focus-visible {
   padding: 10px 20px;
   border-radius: 20px;
   background-color: transparent;
-  position: relative; 
+  position: relative;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
+
+/* Background image overlay for forecast details */
 .forcast-main-details::before {
   content: '';
   position: absolute;
@@ -138,80 +168,85 @@ input:focus-visible {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-  url('https://images.pexels.com/photos/3776592/pexels-photo-3776592.jpeg'); 
+  background-image: url('https://images.pexels.com/photos/3776592/pexels-photo-3776592.jpeg');
   background-position: center;
   background-size: cover;
-  background-position: center;
-  opacity: 0.9; 
+  opacity: 0.9;
   border-radius: 20px;
-  z-index: -1; 
+  z-index: -1;
 }
-.both{
+
+/* Container for both the weather and forecast sections */
+.both {
   display: grid;
   grid-template-columns: auto auto;
   gap: 10px;
-} 
-@media (max-width:992px) {
-  .weather-details h2{
+}
+
+/* Responsive styles for screens less than 992px */
+@media (max-width: 992px) {
+  .weather-details h2 {
     font-size: 20px;
   }
-  .forcast-details h2{
+  .forcast-details h2 {
     font-size: 20px;
   }
   .forcast-main-details {
     grid-template-columns: auto auto;
   }
-  .both{
+  .both {
     display: grid;
     grid-template-columns: auto auto;
     gap: 50px;
-  }   
+  }
 }
-@media (max-width:768px) {
+
+/* Responsive styles for screens less than 768px */
+@media (max-width: 768px) {
   .main-details {
     width: 100%;
   }
-  .toggle-button button{
-   width: 100%;
-
+  .toggle-button button {
+    width: 100%;
   }
-  .weather-details h2{
+  .weather-details h2 {
     font-size: 20px;
     margin-top: 20px;
   }
-  .forcast-details h2{
+  .forcast-details h2 {
     font-size: 20px;
   }
   .forcast-main-details {
-    grid-template-columns: auto auto; 
+    grid-template-columns: auto auto;
     width: 100%;
   }
-  .both{
+  .both {
     grid-template-columns: auto;
     gap: 20px;
     text-align: center;
     justify-content: center;
-  }   
+  }
 }
-@media (max-width:576px) {
-  .input-search{
+
+/* Responsive styles for screens less than 576px */
+@media (max-width: 576px) {
+  .input-search {
     display: block;
   }
-  .search-error{
+  .search-error {
     text-align: left !important;
     margin-top: 10px !important;
   }
-  .input-search button{
+  .input-search button {
     width: 100%;
     margin-top: 15px;
   }
   .forcast-main-details {
-    grid-template-columns: auto; 
+    grid-template-columns: auto;
   }
-  .both{
+  .both {
     grid-template-columns: auto;
     gap: 20px;
     text-align: center;
-  }   
+  }
 }
