@@ -1,0 +1,217 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-image: 
+  url('https://images.pexels.com/photos/2341830/pexels-photo-2341830.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');   background-position: center; */
+  background-image: 
+  url('https://images.pexels.com/photos/3776592/pexels-photo-3776592.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+}
+.weather-content{
+  padding: 0 3%;
+  padding-top: 3%;
+  height: auto;
+}
+.input-search{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.input-search input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 15px;
+  background-color: transparent;
+  border: 1px solid #a09f9f;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+input::placeholder{
+  color: #FFFFFF;
+}
+input:focus-visible {
+  outline: none !important;
+}
+.input-search button{
+  width: 15%;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 15px;
+  background-color: transparent;
+  border: 1px solid #a09f9f;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-align: left;
+}
+.input-search button:hover{
+  background-color: #FFFFFF;
+  color: grey;
+}
+/*toggle-button*/
+.toggle-button button{
+  margin-top: 15px;
+  background-color: transparent;
+  color: #FFFFFF;
+  font-size: 15px;
+  border-style: none;
+  border: 1px solid #a09f9f;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+.toggle-button button:hover{
+  background-color: #FFFFFF;
+  color: grey;
+}
+.weather-details{
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+.weather-details h2{
+  font-size: 25px;
+  font-weight: 800;
+}
+.main-details {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  width: 85%;
+  background-color: transparent;
+  position: relative; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.main-details::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+  url('https://images.pexels.com/photos/3776592/pexels-photo-3776592.jpeg'); 
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9; 
+  border-radius: 20px; 
+  z-index: -1;
+}
+.forcast-details{
+  color: #FFFFFF;
+}
+.forcast-details h2{
+  font-size: 25px;
+  font-weight: 800; 
+}
+.forcast-main-details {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: transparent;
+  position: relative; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.forcast-main-details::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+  url('https://images.pexels.com/photos/3776592/pexels-photo-3776592.jpeg'); 
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9; 
+  border-radius: 20px;
+  z-index: -1; 
+}
+.both{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+} 
+@media (max-width:992px) {
+  .weather-details h2{
+    font-size: 20px;
+  }
+  .forcast-details h2{
+    font-size: 20px;
+  }
+  .forcast-main-details {
+    grid-template-columns: auto auto;
+  }
+  .both{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+  }   
+}
+@media (max-width:768px) {
+  .main-details {
+    width: 100%;
+  }
+  .toggle-button button{
+   width: 100%;
+
+  }
+  .weather-details h2{
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .forcast-details h2{
+    font-size: 20px;
+  }
+  .forcast-main-details {
+    grid-template-columns: auto auto; 
+    width: 100%;
+  }
+  .both{
+    grid-template-columns: auto;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+  }   
+}
+@media (max-width:576px) {
+  .input-search{
+    display: block;
+  }
+  .search-error{
+    text-align: left !important;
+    margin-top: 10px !important;
+  }
+  .input-search button{
+    width: 100%;
+    margin-top: 15px;
+  }
+  .forcast-main-details {
+    grid-template-columns: auto; 
+  }
+  .both{
+    grid-template-columns: auto;
+    gap: 20px;
+    text-align: center;
+  }   
+}
